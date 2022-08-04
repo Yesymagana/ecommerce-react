@@ -11,7 +11,7 @@ const Login = () => {
           data-bs-toggle="modal"
           data-bs-target="#loginModal"
         >
-            Sign in
+          Sign in
         </button>
 
         {/* Modal*/}
@@ -36,11 +36,12 @@ const Login = () => {
                 ></button>
               </div>
               <div className="modal-body">
-                
                 <form>
                   <div className="mb-3">
                     <label htmlFor="loginInputEmail1" className="form-label">
-                      Email address <span className="fw-bold fs-6 text-secondary">OR</span> Username
+                      Email address{" "}
+                      <span className="fw-bold fs-6 text-secondary">OR</span>{" "}
+                      Username
                     </label>
                     <input
                       type="email"
@@ -48,7 +49,6 @@ const Login = () => {
                       id="loginInputEmail1"
                       aria-describedby="emailHelp"
                     />
-                    
                   </div>
                   <div className="mb-3">
                     <label htmlFor="loginInputPassword1" className="form-label">
@@ -77,12 +77,13 @@ const Login = () => {
                     Sign in
                   </button>
                   <button className="btn btn-dark w-100 my-2">
-                  <span className="fa fa-google me-2"></span>Sign in with Google
-                </button>
-                <button className="btn btn-dark w-100 mt-1">
-                  <span className="fa fa-facebook me-2"></span>Sign in with
-                  Facebook
-                </button>
+                    <span className="fa fa-google me-2"></span>Sign in with
+                    Google
+                  </button>
+                  <button className="btn btn-dark w-100 mt-1">
+                    <span className="fa fa-facebook me-2"></span>Sign in with
+                    Facebook
+                  </button>
                 </form>
               </div>
             </div>

@@ -103,7 +103,7 @@ const Footer = () => {
             </SocialContainer>
         </Left>
         <Center>
-            <Title>Useful Links</Title>
+            {/* <Title>Useful Links</Title>
             <List>
                 <ListItem>Home</ListItem>
                 <ListItem>Men's Fashion</ListItem>
@@ -115,7 +115,7 @@ const Footer = () => {
                 <ListItem>About Us</ListItem>
                 <ListItem>Wishlist</ListItem>
                 <ListItem>Terms</ListItem>
-            </List>
+            </List> */}
         </Center>
         <Right>
             <Title>Contact</Title>

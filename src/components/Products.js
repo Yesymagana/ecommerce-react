@@ -75,7 +75,7 @@ const Products = () => {
                       ${product.price}
                     </p>
                     <NavLink to={`/products/${product.id}`} class="btn btn-outline-dark">
-                      ADD TO CART
+                      VIEW DETAILS
                     </NavLink>
                   </div>
                 </div>
