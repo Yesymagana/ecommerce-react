@@ -1,12 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {useSelector} from 'react-redux';
 import Login from './buttons/Login';
 import Signup from './buttons/Signup';
 import CartBtn from './buttons/CartBtn';
 
 const Navbar = () => {
-  const state = useSelector((state) => state.handleCart);
+  
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">

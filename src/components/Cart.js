@@ -1,56 +1,22 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { delCart } from "../redux/action/index";
+import { CartState } from "../redux/reducers/cartContext";
 
-const Cart = () => {
-  const state = useSelector((state) => state.addItem);
-  const dispatch = useDispatch();
+export default function Cart() {
 
-  const handleClose = (item) => {
-    dispatch(delCart(item));
-  };
+  const {
+    state: { cart },
+    dispatch,
+  } = CartState();
 
-  const cartItems = (cartItem) => {
+  
     return (
-      <div className="px-4 my-5 bg-light rounded-3" key={cartItem.id}>
-        <div className="container py-4">
-          <button
-            onClick={() => handleClose(cartItem)}
-            className="btn-close float-end"
-            aria-label="Close"
-          ></button>
-          <div className="row justify-content-center">
-            <div className="col-md-4">
-              <img
-                src={cartItem.image}
-                alt={cartItem.title}
-                height="200px"
-                width="180px"
-              />
-            </div>
-            <div className="col-md-4">
-              <h3>{cartItem.title}</h3>
-              <p className="lead fw-bold">
-                {cartItem.qty} X ${cartItem.price} = ${" "}
-                {cartItem.qty * cartItem.price}
-              </p>
-            </div>
-            <button
-              className="btn btn-outline-dark me-4"
-              // onClick={() => handleButton(product)}
-            >
-              <i className="fa fa-minus"></i>
-            </button>
-            <button
-              className="btn btn-outline-dark"
-              // onClick={() => handleButton(product)}
-            >
-              <i className="fa fa-plus"></i>
-            </button>
+      <div>
+        {cart.map((product) => (
+          <div>
+            <p>{product.title}</p>
           </div>
-        </div>
+        ))}
       </div>
     );
   };
@@ -77,13 +43,3 @@ const Cart = () => {
         )
     }
 
-    return (
-        <>
-            {state.length === 0 && emptyCart()}
-            {state.length !== 0 && state.map(cartItems)}
-            {state.length !== 0 && button()}
-        </>
-    );
-};
-
-export default Cart;

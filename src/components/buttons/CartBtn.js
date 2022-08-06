@@ -1,16 +1,15 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { CartState } from "../../redux/reducers/cartContext";
 
-const CartBtn = () => {
-  const state = useSelector((state) => state.addItem)
+export default function CartBtn() {
+  const {
+    state: { cart },
+    dispatch,
+  } = CartState();
   return (
-    <>
-        <NavLink to="/cart" className="btn btn-outline-dark ms-2">
-            <span className="fa fa-shopping-cart me-1"></span> Cart ({state.length})
-        </NavLink>
-    </>
+    <NavLink to="/cart" className="btn btn-outline-dark ms-2">
+      <span className="fa fa-shopping-cart me-1"></span> Cart 
+    </NavLink>
   );
 }
-
-export default CartBtn;

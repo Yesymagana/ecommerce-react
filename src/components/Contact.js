@@ -21,38 +21,38 @@ const Contact = () => {
           </div>
           <div className="col-md-6">
             <form>
-              <div class="mb-3">
-                <label for="contactForm" class="form-label">
+              <div className="mb-3">
+                <label for="contactForm" className="form-label">
                   Full Name:
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="contactForm"
                   placeholder="Full Name"
                 />
               </div>
-              <div class="mb-3">
-                <label for="contactFormControlInput1" class="form-label">
+              <div className="mb-3">
+                <label for="contactFormControlInput1" className="form-label">
                   Email address:
                 </label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="contactFormControlInput1"
                   placeholder="name@example.com"
                 />
               </div>
-              <div class="mb-3">
-                <label for="contactFormControlTextarea1" class="form-label">
+              <div className="mb-3">
+                <label for="contactFormControlTextarea1" className="form-label">
                   Message:
                 </label>
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="contactFormControlTextarea1"
                   rows="5"
                 ></textarea>
-                <button type="submit" class="btn btn-outline-dark my-4">Send Message</button>
+                <button type="submit" className="btn btn-outline-dark my-4">Send Message</button>
               </div>
             </form>
           </div>
