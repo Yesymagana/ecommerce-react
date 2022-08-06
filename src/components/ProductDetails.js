@@ -11,7 +11,7 @@ const Product = () => {
       } = CartState();
     const {id} = useParams();
     const [product, setProduct] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     
     useEffect(() => {
@@ -42,7 +42,7 @@ const Product = () => {
             </>
         )
     }
-
+    console.log(loading);
     const ShowProduct = () => {
         return(
             <>
@@ -59,7 +59,7 @@ const Product = () => {
                         <i className="fa fa-star"></i>
                     </p>
                     <h3 className="display-6 fw-bold my-4">
-                        ${product.price}
+                        ${product.price.toFixed(2)}
                     </h3>
                     <p className="lead">{product.description}</p>
                     <button className="btn btn-outline-dark px-4 py-2" onClick={() => {dispatch({type: "ADD_TO_CART", payload: product})}}>
